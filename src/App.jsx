@@ -1,6 +1,7 @@
 
 import './App.css'
-
+import './Fifa'
+import Fifa from './Fifa'
 /* eta hocche main component jeta react project create kora hole automatically add hoy.
 react component er nam er first letter always capital hobe. 
 component always kisu return korbe and sheta hocche jsx.
@@ -12,12 +13,13 @@ function App() { //etai hocche main components.
     <> 
       <h1>My first ever react project</h1>
       <Student name="Allen-Blake" id="111"></Student>
+      <Fifa tName="Brazil" bestPlayer="Pele" marketValue="30000000USD" ></Fifa>
+      <Fifa tName="Argentina" bestPlayer="Diago Maradona" marketValue="20000000USD"></Fifa>
+      <Fifa tName="Portugal" bestPlayer="Cristiano Ronaldo" marketValue="17000000USD"></Fifa>
       <Player name="Branden Macculam" runs="6000" ></Player>
       <Player name="Virat Koholi" runs= "5000" ></Player>
       <Player name="Tamim Iqbal Khan" runs="4500"></Player>
-      <Player></Player>
-      <Player></Player>
-      <Player></Player>
+      
       <Student name="David-Smith" id="222"></Student>
       <Student name="Carlos-Don" id="333"></Student>
       <Student ></Student>
