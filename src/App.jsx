@@ -1,15 +1,93 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+/* eta hocche main component jeta react project create kora hole automatically add hoy.
+react component er nam er first letter always capital hobe. 
+component always kisu return korbe and sheta hocche jsx.
 
+
+*/
+function App() { //etai hocche main components.
   return (
-    <>
+    <> 
       <h1>My first ever react project</h1>
+      <Student name="Allen-Blake" id="111"></Student>
+      <Player name="Branden Macculam" runs="6000" ></Player>
+      <Player name="Virat Koholi" runs= "5000" ></Player>
+      <Player name="Tamim Iqbal Khan" runs="4500"></Player>
+      <Player></Player>
+      <Player></Player>
+      <Player></Player>
+      <Student name="David-Smith" id="222"></Student>
+      <Student name="Carlos-Don" id="333"></Student>
+      <Student ></Student>
+      <Teacher></Teacher>
+      {/* <Person></Person> */}
     </>
+  )
+}
+
+/* const player={
+  name: "Branden Macculam"
+  runs: 6000
+} */
+function Player ({name="Not added", runs=0}){
+  return (
+    <div className='student'>
+      <p>Player's Name: {name} </p>
+      <p>Runs: {runs} </p>
+    </div>
+  )
+}
+
+
+/* lets create a component */
+
+function Person(){
+  const name= "Nayeem Hasan Shanto"
+const thingsIOwn ={
+  bike: "I have a bike",
+  car: "I have a car also"
+}
+  return(
+    <>
+    <h1>My name is : {name} </h1>
+    <h2>I am learning web Development</h2>
+    <p>{thingsIOwn.bike}</p>
+    <p>{thingsIOwn.car}</p>
+    </>
+  )
+}
+
+/* components er moddhe style add korbo... */
+/* option-1: main css file e style likhe shetake class name diye component er moddhe use kora.
+  option-2: ekta object create kore .
+*/
+function Student(porps){
+  console.log(porps);
+  const option2 ={
+    color: "yellow",
+    border: "2px solid blue",
+    margin: "30px"
+  }
+  return(
+  <div className='student'> {/* option-1 */}
+    <div style={option2}> {/* object create kore style */}
+      <h2>Name: {porps.name}</h2>
+    <h2>ID: {porps.id} </h2>
+    </div>
+  </div>
+  )
+}
+
+
+function Teacher(){
+  return(
+    <h1 style={{ /* ekhane style directly dynamic vabe dewa hoice */
+      color:"green",
+      border:"2px solid red",
+      padding: "5px"
+    }}>Teacher Name: </h1>
   )
 }
 

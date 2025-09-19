@@ -40,3 +40,11 @@
 .read-the-docs {
   color: #888;
 }
+
+.student{
+  color: red;
+  border: 2px solid green;
+  padding: 5px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+}
