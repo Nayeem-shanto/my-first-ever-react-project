@@ -2,6 +2,9 @@
 import './App.css'
 import './Fifa'
 import Fifa from './Fifa'
+import Actor from './Actor';
+import Singer from './Singer';
+
 /* eta hocche main component jeta react project create kora hole automatically add hoy.
 react component er nam er first letter always capital hobe. 
 component always kisu return korbe and sheta hocche jsx.
@@ -9,9 +12,24 @@ component always kisu return korbe and sheta hocche jsx.
 
 */
 function App() { //etai hocche main components.
+
+  const actors =['Shakib Khan', "Manna", "Arefin Shuvo", "Siam Ahmed"];
+
+  const singer=[
+    {
+    name:  'Tahsan Khan',
+    viralSong : 'Alo Alo'
+  }
+  ]
   return (
     <> 
       <h1>My first ever react project</h1>
+      {
+        singer.map(singer1 => <Singer singer={singer1.name} viralSong={singer1.viralSong}></Singer>)
+      }
+      {
+        actors.map(actor => <Actor nayok={actor}></Actor>)
+      }
       <Student name="Allen-Blake" id="111"></Student>
       <Fifa tName="Brazil" bestPlayer="Pele" marketValue="30000000USD" ></Fifa>
       <Fifa tName="Argentina" bestPlayer="Diago Maradona" marketValue="20000000USD"></Fifa>
